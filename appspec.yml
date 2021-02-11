@@ -1,14 +1,8 @@
 version: 0.0
 os: linux
 files:
-    - source: /
-      destination: /var/www/fleet-api/
-      permissions:
-    - object: /var/www/fleet-api/
-      pattern: “**”
-      owner: ubuntu
-      group: ubuntu
-      mode: 775
+  - source: /
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
