@@ -1,6 +1,8 @@
 #!/bin/bash
 sudo apt-get update -y
 sudo apt-get install -y apache2
+chmod -R 755 /var/www/
+mkdir -P /var/www/fleet-api
 
 # Python dependency
 sudo apt-get install -y python-pip;
@@ -36,6 +38,4 @@ bundle config build.nokogiri — use-system-libraries
 gem install bundler — user-install
 bundle install
 
-#add folder
-mkdir -p /var/www/fleet-api
-
+#add fold
