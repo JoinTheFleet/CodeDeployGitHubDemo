@@ -1,19 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
-  - source: /navigation_logo.png
-    destination: /var/www/html/
+- source: /
+destination: /var/www/fleet-api/
+permissions:
+- object: /var/www/fleet-api/
+pattern: “**”
+owner: ubuntu
+group: ubuntu
+mode: 775
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+      runas: ubuntu
