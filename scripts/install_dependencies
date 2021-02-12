@@ -7,7 +7,7 @@ sudo kill -9 $(cat /var/www/fleet-api/tmp/pids/server.pid)
 rm -rf /var/www/fleet-api
 
 # Create new deployment folder
-mkdir /var/www/fleet-api
+#mkdir /var/www/fleet-api
 
 sudo apt install -y curl
 sudo apt-get install -y apache2
@@ -38,5 +38,9 @@ sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
 bundle install
 
 # Go to the deployment directory
+cd /var/www/
+rails new fleet-api
 cd /var/www/fleet-api/
-bundle install
+bundle install --path vendor/bundle
+bundle exec rake assets:clobber
+bundle exec rake assets:precompile

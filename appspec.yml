@@ -5,11 +5,11 @@ files:
     destination: /var/www/fleet-api/
   - source: /navigation.png
     destination: /var/www/fleet-api/
-permissions:
-  - object: /var/www/fleet-api/
-    pattern: “**”
-    owner: root
-    group: root
+#permissions:
+#  - object: /var/www/fleet-api/
+#    pattern: “**”
+#    owner: root
+#    group: root
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
