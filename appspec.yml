@@ -1,15 +1,16 @@
 version: 0.0
 os: linux
 files:
-- source: /
-destination: /var/www/fleet-api/
-permissions:
+  - source: /
+    destination: /var/www/fleet-api/
+    permissions:
 - object: /var/www/fleet-api/
-pattern: “**”
-owner: ubuntu
-group: ubuntu
-mode: 775
+    pattern: “**”
+    owner: ubuntu
+    group: ubuntu
+    mode: 775
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies
-      runas: ubuntu
+      timeout: 300
+      runas: root
