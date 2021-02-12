@@ -1,7 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html, navigation_logo.png
+  - source: /index.html
+    destination: /var/www/html/
+  - source: /navigation_logo.png
     destination: /var/www/html/
 hooks:
   BeforeInstall:
