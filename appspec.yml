@@ -2,9 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /index.html
-    destination: /var/www/html/
+    destination: /var/www/fleet-api/
+  - source: /navigation.png
+    destination: /var/www/fleet-api/
 permissions:
-  - object: /var/www/html/
+  - object: /var/www/fleet-api/
     pattern: “**”
     owner: ubuntu
     group: utuntu
