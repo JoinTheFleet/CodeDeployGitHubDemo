@@ -39,4 +39,4 @@ gem install bundler — user-install
 
 # Go to the deployment directory
 cd /var/www/fleet-api/
-sudo bundle install
+bundle install
