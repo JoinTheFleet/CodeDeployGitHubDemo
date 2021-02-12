@@ -30,8 +30,8 @@ sudo apt-get install -y qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base 
 sudo apt-get install -y cmake
 sudo apt install -y redis-server
 sudo apt-get install -y imagemagick
-gem install nokogiri — — use-system-libraries
-bundle config build.nokogiri — use-system-libraries
+sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
+sudo gem install-y nokogiri
 gem install bundler — user-install
-bundle install
+sudo bundle install
 
