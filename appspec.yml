@@ -9,7 +9,7 @@ permissions:
   - object: /var/www/fleet-api/
     pattern: “**”
     owner: ubuntu
-    group: utuntu
+    group: ubuntu
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
