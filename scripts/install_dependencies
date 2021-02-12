@@ -7,7 +7,7 @@ sudo kill -9 $(cat /var/www/fleet-api/tmp/pids/server.pid)
 rm -rf /var/www/fleet-api
 
 # Create new deployment folder
-mkdir /var/www/fleet-api
+#mkdir /var/www/fleet-api
 
 sudo apt install -y curl
 sudo apt-get install -y apache2
