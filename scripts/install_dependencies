@@ -41,6 +41,6 @@ bundle install
 cd /var/www/
 rails new fleet-api
 cd /var/www/fleet-api/
-bundle install --path vendor/bundle
+bundle config set --local path 'vendor/bundle'
 bundle exec rake assets:clobber
 bundle exec rake assets:precompile
