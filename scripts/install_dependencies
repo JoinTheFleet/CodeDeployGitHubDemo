@@ -27,8 +27,8 @@ rvm use 2.6.5 --default
 ruby -v
 
 #add feature
-gem install bundler
-gem install -y rails -v 6.0.3.4
+sudo gem install bundler
+sudo gem install -y rails -v 6.0.3.4
 sudo apt-get -y install libqt4-dev libqtwebkit-dev
 sudo apt-get install -y qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
 sudo apt-get install -y cmake
