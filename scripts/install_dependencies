@@ -31,7 +31,7 @@ sudo apt-get install -y cmake
 sudo apt install -y redis-server
 sudo apt-get install -y imagemagick
 sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
-sudo gem install-y nokogiri
+sudo gem install -y nokogiri
 gem install bundler — user-install
 sudo bundle install
 
