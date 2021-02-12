@@ -1,3 +1,4 @@
 #!/bin/bash
-sudo rails s
+#sudo rails s
+sudo service apache2 start
 
