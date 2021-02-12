@@ -6,7 +6,7 @@ sudo kill -9 $(cat /var/www/fleet-api/tmp/pids/server.pid)
 # Remove if previous deployment folder exists
 rm -rf /var/www/fleet-api
 
-# Create new deployment folder and make nginx owner
+# Create new deployment folder
 mkdir /var/www/fleet-api
 
 sudo apt install -y curl
@@ -27,7 +27,7 @@ rvm use 2.6.5 --default
 ruby -v
 
 #add feature
-gem install bundler — user-install
+gem install bundler
 gem install -y rails -v 6.0.3.4
 sudo apt-get -y install libqt4-dev libqtwebkit-dev
 sudo apt-get install -y qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
@@ -35,7 +35,7 @@ sudo apt-get install -y cmake
 sudo apt install -y redis-server
 sudo apt-get install -y imagemagick
 sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
-gem install bundler — user-install
+gem install bundler
 
 # Go to the deployment directory
 cd /var/www/fleet-api/
