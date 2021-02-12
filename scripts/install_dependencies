@@ -35,7 +35,7 @@ sudo apt-get install -y cmake
 sudo apt install -y redis-server
 sudo apt-get install -y imagemagick
 sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
-gem install bundler
+bundle install
 
 # Go to the deployment directory
 cd /var/www/fleet-api/
