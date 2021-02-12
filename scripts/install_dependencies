@@ -2,8 +2,12 @@
 
 export PATH=/home/ubuntu/.rvm/gems/ruby-2.6.5/bin:/home/ubuntu/.rvm/gems/ruby-2.6.5@global/bin:/home/ubuntu/.rvm/rubies/ruby-2.6.5/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.rvm/bin:/home/ubuntu/.rvm/bin
 sudo kill -9 $(cat /var/www/fleet-api/tmp/pids/server.pid)
-cd /var/www/fleet-api/
 
+# Remove if previous deployment folder exists
+rm -rf /var/www/fleet-api
+
+# Create new deployment folder and make nginx owner
+mkdir /var/www/fleet-api
 
 sudo apt install -y curl
 sudo apt-get install -y apache2
@@ -32,5 +36,7 @@ sudo apt install -y redis-server
 sudo apt-get install -y imagemagick
 sudo apt-get install -y libxslt-dev libxml2-dev zlib1g-dev
 gem install bundler — user-install
-sudo bundle install
 
+# Go to the deployment directory
+cd /var/www/fleet-api/
+sudo bundle install
