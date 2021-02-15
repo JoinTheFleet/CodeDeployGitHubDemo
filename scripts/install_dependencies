@@ -39,6 +39,6 @@ bundle install
 
 # Go to the deployment directory
 cd /var/www/fleet-api/
-bundle config set --local path 'vendor/bundle'
-bundle exec rake assets:clobber
-bundle exec rake assets:precompile
+#bundle config set --local path 'vendor/bundle'
+#bundle exec rake assets:clobber
+#bundle exec rake assets:precompile
